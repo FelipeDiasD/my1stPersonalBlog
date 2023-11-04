@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    
+
+}
+
+/*-------------Variables-----------*/
+:root {
+
+
+    --neutral-white: #ffff;
+    --primary-black: #141624;
+    --primary-grey: #E8E8EA;
+    --secondary-blue: #4B6BFB;
+
+
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding-inline: 32px;
+}
+
+body h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+/*-----------Headers-------------*/
+
+.first-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.first-header nav{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.posts-section-title{
+    
+    margin-bottom: 64px;
+}
+
+.greetings-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
+
+}
+
+
+
+/*----------Main content----------*/
+main {
+
+    width:1196px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(392px,1fr));
+    grid-template-rows: auto;
+
+    align-items: center;
+    justify-content: center;
+    
+    gap: 10px;
+}
+
+
+main article{
+
+    width: 392px;
+    height: 464px;
+   
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: l;
+    flex-direction: column;
+
+    border-style: solid;
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: var(--primary-grey);
+    
+    
+
+}
+
+
+main article a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+main article img{
+
+    width: 360px;
+    height: 240px;
+    border-radius: 14px;
+
+    margin-bottom: 16px;
+   
+}
+
+main article a{
+
+    text-decoration: none;
+    color: var(--primary-black);
+}
+
+/*------------posts-content---------------*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
