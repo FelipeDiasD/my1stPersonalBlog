@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    
+
 
 }
 
@@ -14,11 +14,21 @@
 
 
     --secondary-blue: #4B6BFB;
-    --secondary-grey:#545863;
-   --secondary-dark-blue: #242535;
+    --secondary-grey: #545863;
+    --secondary-dark-blue: #242535;
 
 
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
 
 
 body {
@@ -41,9 +51,12 @@ h4 {
     margin: 0;
 }
 
+
+
+
 /*-----------Headers-------------*/
 
-.first-header{
+.first-header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -51,26 +64,27 @@ h4 {
     margin-bottom: 64px;
     padding: 16px;
 
-  
+
 }
 
-.first-header nav{
+.first-header nav {
     width: 85%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
 
-    
+
 }
 
-.first-header nav a{
+.first-header nav a {
     text-decoration: none;
     color: var(--neutral-white);
-    
+
 }
-.posts-section-title{
-    
+
+.posts-section-title {
+
     margin-bottom: 64px;
 }
 
@@ -84,14 +98,93 @@ h4 {
 
 }
 
+/*-------------menu-------------*/
+.open-menu {
+    opacity: 0;
+    visibility: hidden;
+}
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+    opacity: 0;
+    visibility: hidden;
+}
 
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.menu-expanded {
+  position: relative;
+  z-index: 100;
+}
+
+body.menu-expanded main{
+    position: relative;
+    z-index: -1;
+  }
+
+.menu {
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+}
+
+
+body.menu-expanded .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-blue);
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: transform 500ms;
+
+    transform: translateX(0);
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li{
+   margin-top: 60px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: var(--primary-dark-blue);
+    
+}
+
+.open-menu, .close-menu {
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.close-menu {
+    position: fixed;
+    right: 80px;
+    top: 40px;
+    width: 50px;
+    height: 50px;
+}
 
 /*----------Main content----------*/
 main {
 
-    width:1240px;
+    width: 1240px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(392px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(392px, 1fr));
     grid-template-rows: auto;
 
     gap: 15px;
@@ -100,18 +193,15 @@ main {
     justify-content: center;
 
     padding: 16px;
-
-
-    
-   
+ 
 }
 
 
-main article{
+main article {
 
     width: 392px;
     height: 530px;
-   
+
     padding: 16px;
 
     display: flex;
@@ -124,28 +214,23 @@ main article{
     border-width: 0.2px;
     border-color: var(--secondary-dark-blue);
 
-    
 
-
-
-    
-    
 
 }
 
 
-main article img{
+main article img {
 
     width: 360px;
     height: 240px;
     border-radius: 12px;
 
     margin-bottom: 16px;
-   
+
 }
 
-main article a{
-    
+main article a {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,12 +238,12 @@ main article a{
 
     text-decoration: none;
     color: var(--neutral-white);
-    
 
-  
+
+
 }
 
-main article footer{
+main article footer {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -166,19 +251,19 @@ main article footer{
     justify-content: space-between;
 }
 
-main article footer p{
+main article footer p {
     opacity: 0.6;
     margin: 0;
 }
 
-.author-credit-icon{
+.author-credit-icon {
     width: 35%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.profile-icon{
+.profile-icon {
     clip-path: circle(80px);
     width: 30px;
     height: 30px;
@@ -195,7 +280,40 @@ main article footer p{
 
 /*----------placeholder---------*/
 
-.placeholder-comming-soon{
+.placeholder-comming-soon {
     opacity: 0.7;
 }
 
+
+@media (max-width :700px) {
+
+    .first-header nav:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .open-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+
+    main {
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(392px, 1fr));
+        grid-template-rows: auto;
+
+        gap: 15px;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 16px;
+
+    }
+
+
+}
