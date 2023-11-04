@@ -9,9 +9,13 @@
 
 
     --neutral-white: #ffff;
-    --primary-black: #141624;
+    --primary-dark-blue: #141624;
     --primary-grey: #E8E8EA;
+
+
     --secondary-blue: #4B6BFB;
+    --secondary-grey:#545863;
+   --secondary-dark-blue: #242535;
 
 
 }
@@ -26,6 +30,8 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     padding-inline: 32px;
+    background-color: var(--primary-dark-blue);
+    color: var(--neutral-white);
 }
 
 body h1,
@@ -43,6 +49,9 @@ h4 {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 64px;
+    padding: 16px;
+
+  
 }
 
 .first-header nav{
@@ -50,12 +59,15 @@ h4 {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+
+    
 }
 
 .first-header nav a{
     text-decoration: none;
-    color: var(--primary-black);
+    color: var(--neutral-white);
+    
 }
 .posts-section-title{
     
@@ -77,34 +89,48 @@ h4 {
 /*----------Main content----------*/
 main {
 
-    width:1196px;
+    width:1240px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(392px,1fr));
     grid-template-rows: auto;
 
+    gap: 15px;
+
     align-items: center;
     justify-content: center;
+
+
+
+
+    padding: 16px;
+
+
     
-    gap: 10px;
+   
 }
 
 
 main article{
 
     width: 392px;
-    height: 464px;
+    height: 530px;
    
     padding: 16px;
 
     display: flex;
     align-items: center;
-    justify-content: l;
+   justify-content: space-between;
     flex-direction: column;
 
     border-style: solid;
-    border-radius: 16px;
-    border-width: 1px;
-    border-color: var(--primary-grey);
+    border-radius: 12px;
+    border-width: 0.2px;
+    border-color: var(--secondary-dark-blue);
+
+    
+
+
+
     
     
 
@@ -129,7 +155,38 @@ main article a{
     flex-direction: column;
 
     text-decoration: none;
-    color: var(--primary-black);
+    color: var(--neutral-white);
+    
+
+  
+}
+
+main article footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main article footer p{
+    opacity: 0.6;
+    margin: 0;
+}
+
+.author-credit-icon{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-icon{
+    clip-path: circle(80px);
+    width: 30px;
+    height: 30px;
+
+    margin: 0;
 }
 
 /*------------posts-content---------------*/
@@ -137,5 +194,11 @@ main article a{
 .content {
     display: flex;
     flex-direction: column;
+}
+
+/*----------placeholder---------*/
+
+.placeholder-comming-soon{
+    opacity: 0.7;
 }
 
