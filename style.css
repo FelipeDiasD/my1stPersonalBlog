@@ -128,10 +128,6 @@ body.menu-expanded main{
 
 .menu {
     transform: translateX(100%);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 40px;
 }
 
 
@@ -144,16 +140,22 @@ body.menu-expanded .menu {
     width: 100vw;
     height: 100vh;
 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+
+
     transition: transform 500ms;
 
     transform: translateX(0);
 }
 
-.menu ul {
+body.menu-expanded .menu ul {
     list-style: none;
 }
 
-.menu ul li{
+body.menu-expanded .menu ul li{
    margin-top: 60px;
 }
 
