@@ -23,73 +23,161 @@
         <h1>Dias Blog</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a>Blog</a>
             <a>Sobre o autor</a>
+            <a>Contatos</a>
         </nav>
+
+        <button onclick="openMenu()" class="open-menu">
+            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5 7C5 6.44772 5.44772 6 6 6H18C18.5523 6 19 6.44772 19 7C19 7.55228 18.5523 8 18 8H6C5.44772 8 5 7.55228 5 7ZM5 12C5 11.4477 5.44772 11 6 11H18C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H6C5.44772 13 5 12.5523 5 12ZM5 17C5 16.4477 5.44772 16 6 16H18C18.5523 16 19 16.4477 19 17C19 17.5523 18.5523 18 18 18H6C5.44772 18 5 17.5523 5 17Z"
+                    fill="#E8E8EA" />
+            </svg>
+        </button>
     </header>
 
-    <div class = "menu">
+ 
+
+    <div class="menu">
         <ul>
             <li><a onclick="closeMenu()" href="#main">Home</a></li>
             <li><a onclick="closeMenu()" href="#">Sobre o autor</a></li>
             <li><a href="#">Contatos</a></li>
-          </ul>
+        </ul>
     </div>
 
 
-    <header>
+    <header class="post-header">
         <h1>GIT e versionamento de código</h1>
-        <p>Descrição</p>
+        <p>
+            Versionamento de código e o Git em si acredito serem tópicos essenciais para quem está aos poucos entrando no
+            mundo da programação.
+            Neste post vou explicar o que é git e como funciona o versionamento de código.
+        </p>
     </header>
 
-    <article class = "content">
+    <article class="content">
+
+        <h2>Versionamento</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet sodales enim, vitae blandit augue.
-            Fusce ornare lacus nec feugiat tincidunt. Maecenas felis urna, venenatis eu efficitur ut, auctor nec metus.
-            Donec orci turpis, luctus et dapibus varius, tincidunt non erat. Sed rutrum, magna vel lobortis efficitur,
-            sem mauris laoreet orci, sed commodo mauris felis non turpis. Nunc eget nisi augue.
-            Cras feugiat blandit dolor in commodo. Aliquam a magna massa. Curabitur tincidunt malesuada neque in
-            gravida.
+
+            O que seria esse tal versionamento? Bem, quando se fala em versionamento, já se pode fazer a ligação com a
+            palavra versão. Não é incomum que você já tenha feito um trabalho de faculdade ou no ensino médio e teve que
+            realizar várias alterações em arquivos em que, na teoria, eram as versões finais, resultando na seguinte
+            situação:
+
+        </p>
+        <div class="image-wrapper">
+            <img src="./assets/images/Imagem01_post01.png">
+        </div>
+
+        <p>
+            O versionamento vem de encontro com essa situação ao se ter em um sistema, uma forma de se ter todos os registros de
+            alterações realizadas em um determinado arquivo, nos dando a possibilidade de voltar em uma versão anterior,
+            ou adicionar alguma alteração sem ter que necessariamente salvar algo separadamente. Adicionalmente, isso
+            também nos dá a possibilidade de que possamos trabalhar em equipe de maneira mais coesa, ao partirmos de uma
+            mesma versão de determinado arquivo e cada um adicionar uma alteração diferente e assim no final conseguindo
+            unir essas versões em uma só com todas as alterações. No nosso caso, esse conceito é aplicado um arquivo de
+            código.
+        </p>
+
+        <h2>O que é Git?</h2>
+
+        <p>
+            Git é um sistema de versionamento de código, que aplica o conceito explicado acima, de forma que o mesmo
+            guarda os registros de versão do código como snapshots (“tira uma foto” de como o arquivo estava no momento
+            em que foi salvo no sistema), salvando também a referência/caminho para o mesmo. Sendo assim, se forma um
+            fluxo
+            de snapshots.
+        </p>
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem02_post01.png">
+            </div>
+            <figcaption>Fonte: documentação do sistema git disponível
+                <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">aqui</a>
+            </figcaption>
+        </figure>
+
+
+
+        <p>
+            Isso difere o git de outros sistemas de versionamento, pois outros sistemas se utilizam de um conceito de
+            versionamento baseado em arquivos em si, e não em um snapshot. O que gera um fluxo de arquivos e
+            modificações nesse arquivo.
+        </p>
+
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem0_post01.png">
+
+
+
+            </div>
+            <figcaption>Fonte: documentação do sistema git disponível
+                <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">aqui</a>
+            </figcaption>
+        </figure>
+
+
+        <p>
+            Outro ponto de destaque do Git é o fato de que ele opera localmente. Todas as operações e gravações
+            realizadas pelo git estão localmente no seu disco, fazendo com que a maioria seja quase instantânea. Isso
+            também é um salva vidas quando se está offline, seja num avião ou mesmo se a internet caiu.
+        </p>
+
+        <h2>Funcionamento do Git</h2>
+
+        <p>
+            Mas onde o Git guarda esses dados? Bem, para isso o Git cria um repositório, que nada mais é que
+            a base de dados onde estarão todas suas alterações. E para funcionar ele utiliza uma lógica que atribui estados 
+            para os arquivos. Tais estados são:
+
+        <ul>
+            <li> Modified: O arquivo em questão foi alterado, mas ainda não foi feito o commit ou seja, registro dessa
+                alteração na base de dados.</li>
+
+            <li> Staged: As alterações realizadas no arquivo em questão foram marcadas para serem salvas/registradas no
+                próximo commit ou seja, na próxima vez que o registro na base de dados for realizado.</li>
+
+            <li> Commited: Os dados da alteração realizada no arquivo estão registrados e salvos na base de dados.</li>
+        </ul>
+
+
         </p>
 
         <p>
-            Proin tempus nibh ut molestie tempus. Donec semper vehicula tincidunt. Etiam sed venenatis tellus.
-            Vestibulum
-            fringilla quam non ipsum congue, quis eleifend leo gravida. Vivamus ac imperdiet risus. Proin tincidunt orci
-            quis enim pretium mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Com esses estados em mente, no Git temos três seções principais:
+
+        <ul>
+            <li> Working tree: é basicamente onde realizamos as alterações. Os dados são puxados do repositório (Git
+                repository) e disponibilizados para realizarmos qualquer alteração.</li>
+
+            <li> Staging area: Aqui estarão os dados marcados para serem registrados/salvos no próximo commit.</li>
+
+            <li> Git repository: Esta é a parte mais importante do sistema, o seu repositório, aquele que comentamos
+                no qual estão salvos todos os dados e metadados sobre os seus arquivos e projeto como um todo.</li>
+        </ul>
+
+           E com isso temos basicamente o fluxo de trabalho abaixo
         </p>
 
-        <p>
-            Cras quis pretium erat. Duis elit tellus, mattis ut ornare sit amet, vestibulum ut lacus. Sed imperdiet nisl
-            at
-            ullamcorper aliquet. Morbi pulvinar diam at dictum varius. Aenean ut mattis nibh. Nam interdum justo ac odio
-            vehicula, a interdum massa aliquam. Nullam elementum urna arcu, a vehicula ante dignissim id. Etiam
-            ultricies
-            varius ante quis convallis. Praesent quam diam, consequat a magna vitae, accumsan iaculis orci. Aliquam
-            justo
-            metus, dignissim non magna quis, vulputate congue orci.
-        </p>
 
-        <p>
-            Pellentesque nisl nibh, congue sit amet ullamcorper nec, venenatis in nisl. Phasellus ultrices metus blandit
-            nisi fringilla dapibus. Nulla facilisi. Nunc et volutpat lacus. Nam vel elit vitae purus iaculis blandit a
-            et
-            ligula. Donec faucibus nisl sed aliquam pellentesque. In et odio ac magna fringilla tempus. Cras convallis
-            libero ipsum, vitae laoreet risus viverra at. In interdum ligula at magna maximus, et dictum erat suscipit.
-            Curabitur diam felis, malesuada non tristique ac, malesuada in ipsum.
-        </p>
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem04_post01.png">
 
-        <p>
-            Sed feugiat iaculis lectus sit amet aliquam. Cras cursus a nisi vel varius. Cras laoreet justo id ligula
-            sollicitudin euismod. Quisque ipsum mi, venenatis euismod tempor et, vestibulum ac eros. Nullam semper leo
-            ac
-            odio semper, et finibus nisl vehicula. Duis vitae leo est. Donec eu pulvinar nibh. Phasellus rutrum tellus
-            magna, at luctus odio fermentum in. Vestibulum a nisl et nunc molestie mattis. Mauris hendrerit lacus quis
-            arcu
-            dapibus, id molestie enim dignissim. Aenean et libero a ex faucibus condimentum et ut magna.
 
-        </p>
+
+            </div>
+            <figcaption>Fonte: documentação do sistema git disponível
+                <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">aqui</a>
+            </figcaption>
+        </figure>
 
     </article>
+
+    <script src="main.js"></script>
 
 </body>
