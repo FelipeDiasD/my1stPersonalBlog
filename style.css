@@ -418,5 +418,15 @@ figcaption {
     }
 
 
+    .about-me-wrapper ul {
+        width: 90%; 
+    }
+    
+    .contact-icon{
+        width: 15%;
+        height: 15%;
+        
+    }
+
 
 }
