@@ -68,12 +68,6 @@ h4 {
 }
 
 
-.first-header h1{
-
-    
-
-}
-
 .first-header nav {
     width: 85%;
     display: flex;
@@ -284,6 +278,44 @@ main article footer p {
     margin: 0;
 }
 
+.about-me-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.about-me-wrapper a {
+    text-decoration: none;
+    color: var(--neutral-white);
+}
+
+.about-me-wrapper h2 {
+    margin-bottom: 64px;
+}
+
+.about-me-wrapper ul li {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    
+}
+
+.about-me-wrapper ul {
+    width: 25%; 
+}
+
+.contact-icon{
+    width: 15%;
+    height: 15%;
+    
+}
+
+.about-me-img{
+    clip-path: circle(100px);
+}
+
 /*------------posts-content---------------*/
 
 
@@ -328,6 +360,16 @@ figure{
 
 figcaption {
     font-size: small;
+}
+
+.behind-the-scenes-content{
+    align-self: flex-start;
+    width: 40%;
+    text-align: left;
+    font-size: smaller;
+    padding: 10px;
+    background-color: #141624;
+    border-radius: 12px;
 }
 
 /*----------placeholder---------*/

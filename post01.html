@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DiasBlog</title>
 
+    <link rel="icon" type="image/x-icon" href="./assets/images/post-svgrepo-favicon.svg" />
+
     <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +25,8 @@
         <h1>Dias Blog</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a>Sobre o autor</a>
-            <a>Contatos</a>
+            <a href="aboutTheAuthor.html">Sobre o autor</a>
+            <a href="contactMe.html">Contatos</a>
         </nav>
 
         <button onclick="openMenu()" class="open-menu">
@@ -37,7 +39,7 @@
         </button>
     </header>
 
- 
+
 
     <div class="menu">
         <ul>
@@ -51,7 +53,8 @@
     <header class="post-header">
         <h1>GIT e versionamento de código</h1>
         <p>
-            Versionamento de código e o Git em si acredito serem tópicos essenciais para quem está aos poucos entrando no
+            Versionamento de código e o Git em si acredito serem tópicos essenciais para quem está aos poucos entrando
+            no
             mundo da programação.
             Neste post vou explicar o que é git e como funciona o versionamento de código.
         </p>
@@ -68,12 +71,15 @@
             situação:
 
         </p>
-        <div class="image-wrapper">
-            <img src="./assets/images/Imagem01_post01.png">
-        </div>
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem01_post01.png">
+            </div>
+        </figure>
 
         <p>
-            O versionamento vem de encontro com essa situação ao se ter em um sistema, uma forma de se ter todos os registros de
+            O versionamento vem de encontro com essa situação ao se ter em um sistema, uma forma de se ter todos os
+            registros de
             alterações realizadas em um determinado arquivo, nos dando a possibilidade de voltar em uma versão anterior,
             ou adicionar alguma alteração sem ter que necessariamente salvar algo separadamente. Adicionalmente, isso
             também nos dá a possibilidade de que possamos trabalhar em equipe de maneira mais coesa, ao partirmos de uma
@@ -131,7 +137,8 @@
 
         <p>
             Mas onde o Git guarda esses dados? Bem, para isso o Git cria um repositório, que nada mais é que
-            a base de dados onde estarão todas suas alterações. E para funcionar ele utiliza uma lógica que atribui estados 
+            a base de dados onde estarão todas suas alterações. E para funcionar ele utiliza uma lógica que atribui
+            estados
             para os arquivos. Tais estados são:
 
         <ul>
@@ -160,7 +167,7 @@
                 no qual estão salvos todos os dados e metadados sobre os seus arquivos e projeto como um todo.</li>
         </ul>
 
-           E com isso temos basicamente o fluxo de trabalho abaixo
+        E com isso temos basicamente o fluxo de trabalho abaixo
         </p>
 
 
@@ -175,6 +182,172 @@
                 <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">aqui</a>
             </figcaption>
         </figure>
+
+
+        <h2>Introdução ao uso do Git</h2>
+
+        <p>
+            Para usar o nosso querido Git é primeiramente necessário que você instale ele em seu computador.
+            Sendo assim, no caso eu encorajo a ler o <a
+                href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">guia de instalação no site
+                oficial</a>, é bastante simples pricipalmente
+            se você utiliza Windows.
+
+            O maneira principal de você realizar seu verisionamento pelo Git é utilizando a CLI (comand line interface
+            ou interface de linha de comando). Com o mesmo já instalado você irá até o diretório
+            que você deseja versionar e irá clicar com botão direito do mouse e selecionar a seguinte opção para abrir a
+            CLI:
+        </p>
+
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem05_post01.png">
+
+
+
+            </div>
+            <figcaption>Selecione "Git Bash here"
+            </figcaption>
+        </figure>
+
+        <p>
+            A partir daí a uma interface de comando semelhante ao CMD deve se abrir para você. De cara é recomendado
+            realizar alguns primeiros comandos para configurar seu usuário dentro do Git. Para isso insira os comandos:
+
+
+        <ul>
+
+            <li> git config --global user.name "Coloque seu username aqui" - Define o username do usuário no sistema Git
+            </li>
+            <li> git config --global user.email "Insira um e-mail válido nessa configuração ()" - Define o e-mail que
+                será utilizado pelo usuário em questão</li>
+            <li> git config --global init.defaultBranch main </li>
+
+        </ul>
+
+        Neste último comando você pode ter reparado que configuramos algo chamado branch, mais especificamente a default
+        branch (ou branch padrão). As branches (ou ramificações) são usadas no contexto de versionamento para realizar
+        alterações
+        fora da linha principal de alterações. Por exemplo, há um fluxo de alterações numa página de um site e uma nova
+        função
+        será adiconada. Muito provavelmente será criada uma ramificação ou branch diferente para se trabalhar, na qual
+        haverá apenas
+        as alterações relacionadas a esta nova função. Depois do desenvolvimento e aprovação da mesma é possível fundir
+        essas ramificações
+        (o famoso branch merge).
+
+        </p>
+
+
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/git-branch-plus-svgrepo-com.svg">
+
+            </div>
+            <figcaption>Representação de uma branch"
+            </figcaption>
+        </figure>
+
+
+        <p>
+            No caso explicamos brevemente o que é uma branch, mas não o comando em si rs. No caso, o último comando
+            nomeia qual o nome da sua branch principal, aquela que vai existir desde o começo. Os nomes mais comuns são
+            master ou main (que é definido na
+            última parte do comando), aí vai da escolha do cliente (eu prefiro master, por exemplo)
+        </p>
+
+        <p>
+            Para finalmente você começar a usar o Git e ir com tudo pra cima do versionamento é só utilizar o comando:
+
+        <ul>
+
+            <li> git init - Este comando vai inicializar um repositório no diretório que você abriu a CLI
+            </li>
+
+        </ul>
+
+        A partir daí só resta você saber mais algumas coisinhas para iniciar o versionamento do seu código com sucesso.
+        Todo arquivo adicionado ao diretório de trabalho do git tem dois estados (sim dois fora aqueles que já
+        apresentamos),
+        que determinam se o Git está "monitorando" os mesmos, tais são - Tracked (monitorad) ou Untracked (não
+        monitorado).
+
+        Para que um arquivo não monitorado seja adicionado ao "monitoramento" do Git, fazendo com que ele consiga ser
+        versionado
+        precisamos do seguinte comando:
+
+        <ul>
+
+            <li> git add "nome do arquivo do diretório"
+            </li>
+            Ou
+            <li> git add .
+            </li>
+
+            Neste último comando, adicionamos todos os arquivos para serem monitorados pelo Git
+
+        </ul>
+
+        Com isso complementamos o que abordamos sobre estados dos arquivos dentro do Git e para isso trago uma nova
+        imagem que representa
+        o fluxo mais detalhado do git.
+
+
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem06_post01.png">
+
+
+
+            </div>
+            <figcaption>Fonte: documentação do sistema git disponível
+                <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">aqui</a>
+            </figcaption>
+        </figure>
+
+        </p>
+
+
+        <p>
+            No fim só faltou dizer como que nós realizamos o commit, para isso usamos esse comando intuitivo:
+
+        <ul>
+
+            <li> git commit -m "mensagem de commit"
+            </li>
+
+            <li> git commit
+            </li>
+
+            Nesse útimo comando o Git irá abrir uma janela com um editor de texto para que possamos escrever a mensagem
+            da nossa alteração (por padrão é o VIM)
+
+        </ul>
+
+        Assim completamos uma introdução ao uso do git localmente. Podemos ainda fazer o upload dessas informações
+        para uma plataforma de hospedagem do nosso versionamento como o famoso GitHub, mas por enquanto vou terminar este pequeno
+        artigo por aqui. Encorajo a todos que leram todas essas informações a lerem também a documentação oficial, a maioria 
+        das informações aqui colocadas é apenas a ponta do iceberg de um mar de conhecimento, vale muito a pena conferir
+        se realmente você quer aprender e se destacar usando essa ferramenta.
+        </p>
+
+        <div class="behind-the-scenes-content">
+            <h3> Um pouco por trás dos panos:</h3>
+            <p >
+
+                Efetivamente, esse snapshot que citamos é um hash code resultado de um checksum do seu arquivo momento
+                em que ele foi
+                salvo. Este hash é uma string de 40 caracteres composta de caracteres hexadecimais (0-9 e a-f) e
+                calculada
+                com base no conteúdo de um arquivo ou estrutura de diretório no Git.
+
+            </p>
+        </div>
+
+        <p>
+            Muito obrigado por visitar 
+        </p>
+
 
     </article>
 
