@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiasBlog</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/images/post-svgrepo-favicon.svg" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="first-header">
+
+        <h1>Dias Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutTheAuthor.html">Sobre o autor</a>
+            <a href="contactMe.html">Contatos</a>
+        </nav>
+
+        <button onclick="openMenu()" class="open-menu">
+            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5 7C5 6.44772 5.44772 6 6 6H18C18.5523 6 19 6.44772 19 7C19 7.55228 18.5523 8 18 8H6C5.44772 8 5 7.55228 5 7ZM5 12C5 11.4477 5.44772 11 6 11H18C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H6C5.44772 13 5 12.5523 5 12ZM5 17C5 16.4477 5.44772 16 6 16H18C18.5523 16 19 16.4477 19 17C19 17.5523 18.5523 18 18 18H6C5.44772 18 5 17.5523 5 17Z"
+                    fill="#E8E8EA" />
+            </svg>
+        </button>
+    </header>
+
+
+
+    <div class="menu">
+        <ul>
+            <li><a onclick="closeMenu()" href="#main">Home</a></li>
+            <li><a onclick="closeMenu()" href="#">Sobre o autor</a></li>
+            <li><a href="#">Contatos</a></li>
+        </ul>
+    </div>
+
+
+    <header class="post-header">
+        <h1>Algoritmos</h1>
+        <p>
+            Nesse post abordarei sobre o tema algoritmos
+        </p>
+    </header>
+
+    <article class="content">
+        <h2>O que são algoritmos?</h2>
+
+        <p>
+            Quando pensamos em algoritmos, essa palavra grande pode gerar uma série de pensamentos diferentes na
+            primeira vez que ouvimos.
+            Apesar disso, o significado dela é relativamente simples. Algoritmo é uma sequência de passos que se dá, ou
+            que se planeja para que
+            uma tarefa seja executada tendo como finalidade um resultado. Para ilustrar esse conceito o exemplo mais
+            utilizado é uma receita de um prato, como um bolo. Essa receita dirá o que você precisa ter e o que
+            precisa fazer para que no fim você tenha o resultado desejado, no caso o bolo.
+
+        </p>
+
+        <p>
+            No caso da nossa receita de bolo, citamos que ela nos informa os ingredientes que precisamos, os passos que
+            precisamos seguir para
+            fazer o bolo e também nos diz o que esperar como resultado. Respectivamente um algoritmo também terá 3
+            principais pontos, que são:
+
+
+        <ul>
+            <li>As Entradas: É todo dado necessário que o algoritmo irá receber para realizar o seu passo a passo afim
+                de atingir o resultado esperado. </li>
+
+            <li> O processamento: É a parte central do algoritmo e podemos dizer que é sua essência, na qual os passos
+                definidos vão processar os dados recebidos na entrada.</li>
+
+            <li> A saída: Aqui temos os dados que foram processados pelo algoritmo, é onde verificamos se o resultado
+                era o esperado ou não.</li>
+        </ul>
+
+        Sendo assim, os ingredientes de um receita são suas entradas, o modo de preparo seria o processamento e por fim
+        o resultado
+        é sua saída. Acredito que essa seja a melhor maneira de visualizar o que realmente é um algoritmo.
+
+        </p>
+
+        <p>
+            Se pensarmos bem, os algoritmos estão em toda parte. Tudo que fazemos pode ser separado em entradas,
+            processamento e saídas. No
+            contexto de desenvolvimento de software, nós aplicamos este conceito para dar instruções ao computador, afim
+            de se obter resultados específicos.
+            Fazemos isso através das linguagens de programação, como Java, C, Javascript, entre outras. A principal
+            diferença entre um
+            algoritmo qualquer e um criado para o computador está no fato de que o computador é uma máquina literal e
+            precisa que
+            descrevamos com exatidão o que queremos. No caso, podemos citar um exemplo como um algoritmo para quebrar um
+            ovo.
+
+        <h4>Quebre um ovo</h4>
+        <ul>
+            <li> Pegue o ovo</li>
+
+            <li> Quebre a casca</li>
+
+            <li> Abra cuidadosamente o mesmo em cima de um recipiente</li>
+
+        </ul>
+
+        Se hipoteticamente disséssemos a um computador para fazer isso, talvez surgiriam as seguintes questões.
+        <ul>
+            <li> Com o que vou pegar o ovo? </li>
+
+            <li> Como vou quebrar? Com o que irei quebrar?</li>
+
+            <li> Como devo abrir? Que recipiente? Onde está o recepiente?</li>
+        </ul>
+
+        Deste modo, temos que especificar muito bem o que queremos em cada passo para que o computador possa nos dar o
+        resultado que esperamos.<br /><br />
+
+        Por fim, podemos representar os algoritmos, através da escrita, descrevendo os mesmos na nossa linguagem nativa
+        ou em uma linguagem
+        que se aproxima da linguagem de programação, como o Portugol. Além disso temos a representação através de
+        fluxogramas.
+
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem01_postAlgoritmos.png">
+
+
+
+            </div>
+            <figcaption>Representação de um algoritmo</figcaption>
+        </figure>
+
+        </p>
+
+        <h2>Refinando: Estruturas dos algoritmos</h2>
+
+        Agora que já definimos o que é um algoritmo, vamos aprender sobre algumas estruturas internas que nos auxiliam a
+        construir algoritmos
+        e são comuns na maioria das linguagens de programação.
+
+        <h3>Variáveis</h3>
+
+        Quando pensamos em variáveis, pensamos em alguma coisa que varia, se altera, muda, certo? No contexto de
+        algoritmos,
+        variável será onde guardaremos um dado, que pode se alterar ao longo do processamento ou não. Esse dado pode ser
+        um dado de
+        entrada ou mesmo de saída, como uma variável para guardar o resultado de uma soma, por exemplo. Numa soma, temos
+        dois números de entrada,
+        o processamento e o resultado, de modo que, tanto as entradas e saídas podem ser armazenadas em variáveis:
+
+        <ul>
+            <li> variável número1 -> recebe -> 1 </li>
+
+            <li> variável número2 -> recebe -> 1</li>
+
+            <li> soma -> variável número1 + variável número2</li>
+
+            <li> variável resultado -> recebe -> resultado de soma (2)</li>
+
+        </ul>
+
+        Este exemplo ilustra como podemos armazenar as entradas e saídas de um algoritmo, fazendo com que possamos ter a
+        possibilidade de reutilizar
+        tais variáveis. De modo que, não somente podemos armazenar números, mas também outros tipos de dado. Podemos
+        resumir os tipos de dado mais comuns
+        a 3 tipos: <br />
+        <ul>
+            <li>Dados numéricos (reais, fracionados...) </li>
+
+            <li>Dados textuais (caracteres, palavras...)</li>
+            
+            <li>Dados booleanos (falso ou verdadeiro)</li>
+
+        </ul>
+
+        
+        <h3>Estruturas condicionais</h3>
+        <h3>Estruturas de repetição</h3>
+        <h2>Algoritmos e estruturas de dados!</h2>
+    </article>
