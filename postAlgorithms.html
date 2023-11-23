@@ -53,7 +53,7 @@
     <header class="post-header">
         <h1>Algoritmos</h1>
         <p>
-            Nesse post abordarei sobre o tema algoritmos
+            Nesse post abordarei sobre o tema algoritmos, sua definição, seus componentes e assuntos complementares.
         </p>
     </header>
 
@@ -97,7 +97,8 @@
 
         <p>
             Se pensarmos bem, os algoritmos estão em toda parte. Tudo que fazemos pode ser separado em entradas,
-            processamento e saídas. No
+            processamento e saídas.
+            No
             contexto de desenvolvimento de software, nós aplicamos este conceito para dar instruções ao computador, afim
             de se obter resultados específicos.
             Fazemos isso através das linguagens de programação, como Java, C, Javascript, entre outras. A principal
@@ -129,14 +130,13 @@
         Deste modo, temos que especificar muito bem o que queremos em cada passo para que o computador possa nos dar o
         resultado que esperamos.<br /><br />
 
-        Por fim, podemos representar os algoritmos, através da escrita, descrevendo os mesmos na nossa linguagem nativa
-        ou em uma linguagem
-        que se aproxima da linguagem de programação, como o Portugol. Além disso temos a representação através de
-        fluxogramas.
+        Por fim, podemos representar os algoritmos, através da escrita de um pseudocódigo, descrevendo os mesmos numa
+        linguagem próxima da humana, como o Portugol e também através de
+        fluxogramas ou diagramas de blocos.
 
         <figure>
             <div class="image-wrapper">
-                <img src="./assets/images/Imagem01_postAlgoritmos.png">
+                <img src="./assets/images/Imagem00_postAlgoritmos.png">
 
 
 
@@ -144,7 +144,7 @@
             <figcaption>Representação de um algoritmo</figcaption>
         </figure>
 
-        </p>
+
 
         <h2>Refinando: Estruturas dos algoritmos</h2>
 
@@ -154,13 +154,16 @@
 
         <h3>Variáveis</h3>
 
-        Quando pensamos em variáveis, pensamos em alguma coisa que varia, se altera, muda, certo? No contexto de
-        algoritmos,
-        variável será onde guardaremos um dado, que pode se alterar ao longo do processamento ou não. Esse dado pode ser
-        um dado de
-        entrada ou mesmo de saída, como uma variável para guardar o resultado de uma soma, por exemplo. Numa soma, temos
-        dois números de entrada,
-        o processamento e o resultado, de modo que, tanto as entradas e saídas podem ser armazenadas em variáveis:
+        <p>
+            Quando pensamos em variáveis, pensamos em alguma coisa que varia, se altera, muda, certo? No contexto de
+            algoritmos,
+            variável será onde guardaremos um dado, que pode se alterar ao longo do processamento ou não. Esse dado pode
+            ser
+            um dado de
+            entrada ou mesmo de saída, como uma variável para guardar o resultado de uma soma, por exemplo. Numa soma,
+            temos
+            dois números de entrada,
+            o processamento e o resultado, de modo que, tanto as entradas e saídas podem ser armazenadas em variáveis:
 
         <ul>
             <li> variável número1 -> recebe -> 1 </li>
@@ -182,13 +185,200 @@
             <li>Dados numéricos (reais, fracionados...) </li>
 
             <li>Dados textuais (caracteres, palavras...)</li>
-            
+
             <li>Dados booleanos (falso ou verdadeiro)</li>
 
         </ul>
 
-        
+        Por fim, no contexto computacional, cada variável será armazenada em um local na memória do computador, com cada
+        linguagem de programação tendo uma estratégia de alocação de memória para as variáveis.
+        </p>
+
+
         <h3>Estruturas condicionais</h3>
+
+        Agora vejamos, nos deparamos uma situação na qual precisamos decidir uma ação que depende de uma condição, e
+        agora?
+        Para isso tempos as estruturas condicionais. Estas estruturas se baseiam na condição que lhes é atribuída para
+        realizar
+        uma decisão e continuar o processamento. Se esta condição for verdadeira, então faça isso, caso contrário faça
+        aquilo.
+        Essa é a lógica utilizada pela estrutura condicional, que comumente é chamada de "se" ou o famoso "if"
+
+
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem01_postAlgoritmos.png">
+            </div>
+            <figcaption>Representação de um algoritmo com uma condicional</figcaption>
+        </figure>
+
+        Na representação acima, temos a entrada de uma situação que é a lâmpada não funcionando, na
+        continuidade do algoritmo, temos 2 condicionais
+
+        <ul>
+            <li>A lâmpada está ligada? - Se esta condição for verdadeira eu sigo para a próxima condição - Caso
+                contrário eu executo a ação de ligar a lâmpada </li>
+
+            <li>O bulbo está queimado? - Se esta condição for verdadeira eu executo a ação de substituir a lâmpada -
+                Caso
+                contrário eu sigo para a minha ação final</li>
+
+            <li>Caso nenhuma condição seja verdadeira eu vou consertar essa lâmpada</li>
+
+        </ul>
+
+        Deste modo, a estrutura condicional será utilizada sempre que temos uma tomada de decisão dependente de um fator
+        ou uma condição.
+
+
+
         <h3>Estruturas de repetição</h3>
-        <h2>Algoritmos e estruturas de dados!</h2>
+
+        <p>
+            Adicionalmente, temos mais uma estrutura essencial em algoritmos. No caso de precisarmos repetir uma ação
+            diversas vezes,
+            eu adicionarei vários passos iguais para esse algoritmo? Não é uma opção muito boa, para isso temos as
+            estruturas de repetição.
+            A lógica inicial da estrutura de repetição é semelhante a condicional, na qual ela verifica uma condição
+            pré-estabelecida, para então
+            realizar o processamento definido dentro da estrutura. Depois de realizado esse processamento, ela volta a
+            verificar a condicional e a
+            depender do resultado da condição programada o processo se repetirá ou não, evitando a repetição de passos.
+
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem02_postAlgoritmos.png">
+            </div>
+            <figcaption>Representação de um algoritmo com estrutura de repetição</figcaption>
+        </figure>
+
+
+        Na representação acima, temos a nossa variável de entrada que é a nossa roupa de cama suja, na
+        continuidade do algoritmo, temos a estrutura de repetição, iniciando com uma condicional
+
+        <ul>
+            <li>A roupa está suja? - Se esta condição for verdadeira eu adentro minha estrutura de repetição - Caso
+                contrário eu sigo para a saída e vou recolher a roupa </li>
+
+            <li> Após a lavagem de 20 minutos eu refaço a pergunta da condicional -Se esta condição for verdadeira
+                novamente
+                eu continuo em minha estrutura de repetição, e isso se segue até a nossa variável roupa estar limpa</li>
+
+        </ul>
+
+        No mais, utilizamos essa estrutura sempre que quisermos que um passo se repita.
+
+        </p>
+
+
+        <h2>Tipos de algoritmos e estruturas de dados</h2>
+
+        <p>
+            Agora que vimos o que é e quais as principais estruturas de um algoritmo, podemos nos aprofundar brevemente
+            em alguns tipos comuns de algoritmos e o que são estruturas de dados.<br />
+            Abaixo cito princilpamente dois tipos de algoritmos, muito utilizados na programação.
+
+        <ul>
+            <li>Algoritmos de ordenação: Como o nome já diz, tais algoritmos tem a função de ordenar ou organizar um
+                conjunto de dados,
+                como uma lista de números por exemplo.<br />
+                Exemplos: Bubble sort, quick sort, merge sort.
+            </li>
+            <li>Algoritmos de busca: São algoritmos que tentam localizar um dado exato em meio a um conjunto de
+                dados.<br />
+                Exemplos: Binary Search, Linear Search </li>
+        </ul>
+
+        Existem outros tipos, como algoritmos gulosos, de recursão e por aí vai, porém de início, acredito que estes
+        sejam
+        aqueles pra se manter em vista.<br />
+
+        Complementando os algoritmos temos as estruturas de dados. Tais estruturas armazenam dados, assim como as
+        variáveis. Porém, diferente de uma
+        variável, a estrutura de dado tem uma estratégia para armazenar e manejar seus dados. <br />
+
+        A estrutra mais comum que você encontrará na maioria das linguagens de programação é o vetor ou array. Por
+        padrão essa estrutura armazena
+        uma série de dados do mesmo tipo, como uma série de números ou caracteres texuais e tem um tamanho fixo. Por fim
+        a última característica
+        desse tipo de estrutura é a estratégia utilizada para armazenamento. Cada novo elemento adicionado sempre será
+        adicionado na última posição
+        vazia disponível. <br /><br />
+
+        <div class="behind-the-scenes-content">
+            <h3> Um pouco por trás dos panos:</h3>
+            <p>
+
+                A alocação de memória de um vetor
+                é literalmente feita em sequência na
+                memória do computador.
+
+            </p>
+        </div>
+
+
+        <figure>
+            <div class="image-wrapper">
+                <img src="./assets/images/Imagem03_postAlgoritmos.png">
+            </div>
+            <figcaption>Representação de um vetor</figcaption>
+        </figure>
+
+        É possível definir uma estrutura de dado com as mais diversas estratégias de armazenamento de dados, sendo que
+        tais estruturas personalizadas
+        são chamadas de tipos abstratos de dados. Nesse contexto de estratégias diferentes, temos as estrutras clássicas
+        que podemos citar:
+
+
+        <ul>
+            <li>Pilha<br />
+                Também guarda um conjunto de elementos do mesmo tipo e possui tamanho fixo, mas segue a seguinte
+                estratégia: <br />
+                A inserção de novos elementos é feita no início, ou seja no topo. A retirada de elementos também
+                ocorre pelo topo, dando uma característica única que é a de armazenar elementos em uma ordem e os
+                retirar pela ordem inversa. Este tipo de estratégia é chamado de FILO (first in, last out) ou UEPS
+                (último que entra, primeiro que sai)
+                Para visualizar melhor, imagine uma pilha de pratos.
+
+            </li>
+            <li>Fila estática <br />
+                Guarda um conjunto de elementos do mesmo tipo e possui tamanho fixo, mas segue a seguinte estratégia:
+                <br />
+                A inserção de novos elementos é feita no final, ou seja na última posição vazia disponível. A retirada
+                de elementos
+                ocorre pelo início, ou topo. Este tipo de estratégia é chamado de FIFO (first in, first out) ou PEPS
+                (primeiro que entra, primeiro que sai)
+                Para vizualizar este tipo de estrutura, imagine uma fila qualquer, como a de banco.</li>
+
+            <li>Lista encadeada <br />
+                Esta é um pouco diferente das outras, mas de início segue o mesmo princípio de guardar um conjunto de
+                elementos do mesmo tipo. Tais elementos serão
+                estruturas internas que possuirão uma referência para o próximo elemento, e o último elemento apontará
+                para o fim (ou uma posição nula). Aqui posso
+                inserir e remover elementos em qualquer posição, justamente por poder alterar pra onde cada estrutura
+                apontará.
+            </li>
+
+            <figure>
+                <div class="image-wrapper">
+                    <img src="./assets/images/Imagem04_postAlgoritmos.png">
+                </div>
+                <figcaption>Representação de uma lista encadeada</figcaption>
+            </figure>
+
+        </ul>
+
+        Enfim, as estruturas de dados andam lado a lado com os algoritmos, servindo como ferramentas poderosas na
+        criação de um algoritmo efetivo,
+        que não só resolve um problema, mas que também o faz mais rapidamente e ocupando o menor espaço. Posso abordar o
+        desempenho de algoritmos em
+        um próximo post, pois acredito que isto pode ser dissertado a parte. Deste modo, encorajo e indico muito a
+        prática de algoritmos, de início
+        usando pseudocódigo e posteriormente em sites como
+        hackerrank, leetcode e semelhantes. Além de melhorar a nossa capacidade lógica como desenvolvedor, nos
+        possibilita escrever códigos
+        cada vez melhores. Espero que esse post tenha te auxiliado de alguma maneira, obrigado por chegar até aqui!
+        </p>
+
     </article>
